@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "create-page": {
+      "description": "Create a new page",
+      "factory": "./create-page/index#createPage",
+      "schema": "./create-page/schema.json"
+    }
+  }
+}

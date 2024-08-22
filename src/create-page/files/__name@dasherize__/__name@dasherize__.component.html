@@ -1,0 +1,21 @@
+
+
+
+@if(i18nService.i18n$ | async; as i18n) {
+<ng-container class="<%= dasherize(name) %>-component">
+    <ng-template #headerNode>
+      <!-- Header content goes here -->
+    </ng-template>
+  
+    <ng-template #infoNode>
+      <!-- Info content goes here -->
+    </ng-template>
+  
+    <ng-template #socialProvidersNode>
+      <!-- Social providers content goes here -->
+    </ng-template>
+
+    <div class="<%= dasherize(name) %>-main">
+    </div>
+  </ng-container>
+}

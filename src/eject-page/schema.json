@@ -1,0 +1,137 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "SchematicsEjectPage",
+  "title": "Eject Page Schema",
+  "type": "object",
+  "properties": {
+    "themeType": {
+      "description": "account or login",
+      "type": "string",
+      "default": "login",
+      "enum": ["account", "login"],
+      "x-prompt": {
+        "message": "select theme type",
+        "type": "list",
+        "items": [
+          { "value": "login", "label": "login" },
+          { "value": "account", "label": "account" }
+        ]
+      }
+    },
+    "name": {
+      "type": "string",
+      "x-prompt": {
+        "message": "Select the page you want to customize:",
+        "type": "list",
+        "items": [
+          { "value": "login.ftl", "label": "login.ftl" },
+          { "value": "login-username.ftl", "label": "login-username.ftl" },
+          { "value": "login-password.ftl", "label": "login-password.ftl" },
+          {
+            "value": "webauthn-authenticate.ftl",
+            "label": "webauthn-authenticate.ftl"
+          },
+          {
+            "value": "webauthn-register.ftl",
+            "label": "webauthn-register.ftl"
+          },
+          { "value": "register.ftl", "label": "register.ftl" },
+          { "value": "info.ftl", "label": "info.ftl" },
+          { "value": "error.ftl", "label": "error.ftl" },
+          {
+            "value": "login-reset-password.ftl",
+            "label": "login-reset-password.ftl"
+          },
+          {
+            "value": "login-verify-email.ftl",
+            "label": "login-verify-email.ftl"
+          },
+          { "value": "terms.ftl", "label": "terms.ftl" },
+          {
+            "value": "login-oauth2-device-verify-user-code.ftl",
+            "label": "login-oauth2-device-verify-user-code.ftl"
+          },
+          {
+            "value": "login-oauth-grant.ftl",
+            "label": "login-oauth-grant.ftl"
+          },
+          { "value": "login-otp.ftl", "label": "login-otp.ftl" },
+          {
+            "value": "login-update-profile.ftl",
+            "label": "login-update-profile.ftl"
+          },
+          {
+            "value": "login-update-password.ftl",
+            "label": "login-update-password.ftl"
+          },
+          {
+            "value": "login-idp-link-confirm.ftl",
+            "label": "login-idp-link-confirm.ftl"
+          },
+          {
+            "value": "login-idp-link-email.ftl",
+            "label": "login-idp-link-email.ftl"
+          },
+          {
+            "value": "login-page-expired.ftl",
+            "label": "login-page-expired.ftl"
+          },
+          {
+            "value": "login-config-totp.ftl",
+            "label": "login-config-totp.ftl"
+          },
+          { "value": "logout-confirm.ftl", "label": "logout-confirm.ftl" },
+          {
+            "value": "idp-review-user-profile.ftl",
+            "label": "idp-review-user-profile.ftl"
+          },
+          { "value": "update-email.ftl", "label": "update-email.ftl" },
+          {
+            "value": "select-authenticator.ftl",
+            "label": "select-authenticator.ftl"
+          },
+          { "value": "saml-post-form.ftl", "label": "saml-post-form.ftl" },
+          {
+            "value": "delete-credential.ftl",
+            "label": "delete-credential.ftl"
+          },
+          { "value": "code.ftl", "label": "code.ftl" },
+          {
+            "value": "delete-account-confirm.ftl",
+            "label": "delete-account-confirm.ftl"
+          },
+          {
+            "value": "frontchannel-logout.ftl",
+            "label": "frontchannel-logout.ftl"
+          },
+          {
+            "value": "login-recovery-authn-code-config.ftl",
+            "label": "login-recovery-authn-code-config.ftl"
+          },
+          {
+            "value": "login-recovery-authn-code-input.ftl",
+            "label": "login-recovery-authn-code-input.ftl"
+          },
+          { "value": "login-reset-otp.ftl", "label": "login-reset-otp.ftl" },
+          { "value": "login-x509-info.ftl", "label": "login-x509-info.ftl" },
+          { "value": "webauthn-error.ftl", "label": "webauthn-error.ftl" }
+        ]
+      }
+    },
+    "project": {
+      "type": "string",
+      "description": "The name of the project.",
+      "$default": {
+        "$source": "projectName"
+      }
+    },
+    "path": {
+      "type": "string",
+      "format": "path",
+      "description": "The path to create the simple schematic within.",
+      "visible": false,
+      "default": "src/keycloak-theme/"
+    }
+  },
+  "required": ["themeType", "name"]
+}

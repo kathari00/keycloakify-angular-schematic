@@ -1,12 +1,11 @@
 {
   "name": "@keycloakify-angular/schematics",
   "version": "0.0.0",
-  "description": "A blank schematics",
+  "description": "Keycloakify Angular Schematics",
   "tsconfig": "tsconfig.json",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "build:watch": "tsc -p tsconfig.json --watch",
-    "test": "npm run build && jasmine src/**/*_spec.js"
+    "build:watch": "tsc -p tsconfig.json --watch"
   },
   "keywords": [
     "schematics"
@@ -15,13 +14,12 @@
   "license": "MIT",
   "schematics": "./src/collection.json",
   "dependencies": {
-    "@angular-devkit/core": "18.2.0",
-    "@angular-devkit/schematics": "18.2.0",
-    "@schematics/angular": "18.2.0",
+    "@angular-devkit/core": "^18.2.4",
+    "@angular-devkit/schematics": "^18.2.4",
+    "@schematics/angular": "^18.2.4",
     "typescript": "~5.5.2"
   },
   "devDependencies": {
-  
-    "@types/node": "18.18.0"
+    "@types/node": "^20.0.0"
   }
 }
